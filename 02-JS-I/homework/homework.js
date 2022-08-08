@@ -73,7 +73,11 @@ function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
-  return str1.lenght === str2.lenght;
+  if (str1.length === str2.length){
+    return true;
+  }else {
+    return false;
+  }
  
 }
 
@@ -171,17 +175,21 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-  if (numero => 0){
-    return "Es positivo";
-  }else{
-    "Es negativo";}
-}
+  if (numero === 0){
+     return false;
+  }else if (numero <0){
+    return "Es negativo";
+  }else (numero >0 );{
+        return "Es positivo"
+      }
+    }
+
 
 function agregarSimboloExclamacion(str) {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
-  return str + "!"
+  return str + "!";
 }
 
 function combinarNombres(nombre, apellido) {
@@ -195,7 +203,7 @@ function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  return "hola" + " " + nombre + "!"
+  return "Hola "+ nombre+ "!"
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
@@ -237,7 +245,7 @@ function esVocal(letra){
   if (letra.lenght > 1){
     return "dato incorrecto";
   }else if (letra ==="a" || letra==="e" || letra=== "i" || letra ==="o" || letra==="u"){
-    return "Es Vocal";
+    return "Es vocal";
   }else {
     return "Dato incorrecto";
   }
